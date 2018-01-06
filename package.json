@@ -1,0 +1,14 @@
+{
+  "name": "foodmanagement",
+  "version": "1.0.0",
+  "description": "Manage your expiring food!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Allen Liu",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.7.10"
+  }
+}
