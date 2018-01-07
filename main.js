@@ -7,7 +7,7 @@ const {app, BrowserWindow, Menu, ipcMain} = electron;
 // SET ENV
 process.env.NODE_ENV = 'production';
 
-
+// Windows in the app
 let mainWindow;
 let addWindow;
 
