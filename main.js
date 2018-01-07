@@ -5,10 +5,14 @@ const path = require('path');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 // SET ENV
-process.env.NODE_ENV = 'production';
+// process.env.NODE_ENV = 'production';
 
 let mainWindow;
 let addWindow;
+
+var main = require("main")
+  , server = require("./server")
+  ;
 
 // Listen for app to be ready
 app.on('ready', function(){
@@ -31,7 +35,7 @@ app.on('ready', function(){
   Menu.setApplicationMenu(mainMenu);
 });
 
-function createAddWindow(){
+function createAddWindow() {
   // Create new window
   addWindow = new BrowserWindow({
     width: 300,
@@ -53,7 +57,6 @@ function createAddWindow(){
 
 // Catch item:add
 ipcMain.on('item:add', function(e, item){
-  console.log(item);
   mainWindow.webContents.send('item:add', item);
   addWindow.close();
 });

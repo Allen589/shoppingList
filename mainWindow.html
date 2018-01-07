@@ -13,7 +13,10 @@
     </div>
   </nav>
   <ul></ul>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
   <script>
+
     const electron = require('electron');
     const {ipcRenderer} = electron;
     const ul = document.querySelector('ul');
@@ -42,9 +45,6 @@
         ul.className = '';
       }
     }
-
-
-
   </script>
 </body>
 </html>
